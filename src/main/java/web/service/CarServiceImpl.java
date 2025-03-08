@@ -30,4 +30,13 @@ public class CarServiceImpl implements CarService {
     public List<Car> getCarsList() {
         return carsList;
     }
+
+    @Override
+    public List<Car> choiceMet(Integer count) {
+        if (count != null && count < 5 && count > 0) {
+            return getNCars(count);
+        } else {
+            return getCarsList();
+        }
+    }
 }

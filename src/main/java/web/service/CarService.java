@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface CarService {
      List<Car> getNCars(int count);
-     public List<Car> getCarsList();
+     List<Car> getCarsList();
+     List<Car> choiceMet(Integer count);
 }
