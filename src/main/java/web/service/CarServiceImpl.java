@@ -22,21 +22,11 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public List<Car> getNCars(int count) {
-        return carsList.subList(0, count);
-    }
-
-    @Override
-    public List<Car> getCarsList() {
-        return carsList;
-    }
-
-    @Override
-    public List<Car> choiceMet(Integer count) {
+    public List<Car> getCarsByCount(Integer count) {
         if (count != null && count < 5 && count > 0) {
-            return getNCars(count);
+            return carsList.subList(0, count);
         } else {
-            return getCarsList();
+            return carsList;
         }
     }
 }
